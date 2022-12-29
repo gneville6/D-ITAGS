@@ -6,6 +6,8 @@ This repository contains the various components of GRSTAPS+E. These include a re
 Partial-Order Planning (FCPOP)**; **Incremental Task Allocation Graph Search (Itags)**; and **Graphically Recursive Task
 Allocation, Planning, and Scheduling (GRSTAPS)**. Additionally, it contains the original implementations of ...
 
+
+More specifically this repo is a copy of the GRSTAPSE repo containing the code for D-ITAGS.
 ## Dependencies
 
 ### apt
