@@ -1,0 +1,6 @@
+{
+  "yaml_filepath":      "data/geometric_planning/maps/aamas2022_scenario1.yaml",
+  "dubins":             false,
+  "configuration_type": "ompl",
+  "environment_type":   "pgm"
+}

@@ -1,0 +1,371 @@
+{
+  "motion_planners": [
+    {
+      "environment_parameters": {
+        "configuration_type": "ompl",
+        "environment_type": "pgm",
+        "yaml_filepath": "data/geometric_planning/maps/iros_map_full.yaml"
+      },
+      "mp_parameters": {
+        "timeout": 0.001,
+        "simplify_path": false,
+        "simplify_path_timeout": 1.0,
+        "connection_range": 1.0,
+        "configuration_type": "ompl"
+      },
+      "mp_type": "prm"
+    },
+    {
+      "environment_parameters": {
+        "configuration_type": "ompl",
+        "environment_type": "pgm",
+        "yaml_filepath": "data/geometric_planning/maps/iros_map_full.yaml"
+      },
+      "mp_parameters": {
+        "timeout": 0.1,
+        "simplify_path": true,
+        "simplify_path_timeout": 1.0,
+        "connection_range": 1.0,
+        "configuration_type": "ompl"
+      },
+      "mp_type": "prm"
+    }
+  ],
+  "species": [
+    {
+      "name": "Ambulance",
+      "traits": [
+        0,
+        3,
+        5,
+        0,
+        0
+      ],
+      "bounding_radius": 0.01,
+      "speed": 3.0,
+      "mp_index": 0
+    },
+    {
+      "name": "FireTruckGround",
+      "traits": [
+        0,
+        3,
+        3,
+        3,
+        1.1
+      ],
+      "bounding_radius": 0.01,
+      "speed": 3.0,
+      "mp_index": 0
+    },
+    {
+      "name": "FireTruckAerial",
+      "traits": [
+        1,
+        6,
+        1.1,
+        1.1,
+        1.1
+      ],
+      "bounding_radius": 0.01,
+      "speed": 6.0,
+      "mp_index": 1
+    },
+    {
+      "name": "CraneGround",
+      "traits": [
+        0,
+        2,
+        10,
+        0,
+        10
+      ],
+      "bounding_radius": 0.01,
+      "speed": 2.0,
+      "mp_index": 0
+    },
+    {
+      "name": "CraneAerial",
+      "traits": [
+        1,
+        4,
+        3.4,
+        2,
+        4
+      ],
+      "bounding_radius": 0.01,
+      "speed": 4.0,
+      "mp_index": 1
+    },
+    {
+      "name": "LostAgent",
+      "traits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "bounding_radius": 0.01,
+      "speed": 0.1,
+      "mp_index": 1
+    }
+  ],
+  "robots": [
+    {
+      "name": "Ambulance",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "Ambulance"
+    },
+    {
+      "name": "FireTruckGround",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "FireTruckGround"
+    },
+    {
+      "name": "CraneGround",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "CraneGround"
+    },
+    {
+      "name": "FireTruckAerial",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "FireTruckAerial"
+    },
+    {
+      "name": "CraneAerial",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "CraneAerial"
+    },
+    {
+      "name": "LostAgent",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "LostAgent"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "moveSurvivor",
+      "duration": 0.1,
+      "desired_traits": [
+        0,
+        0.1,
+        10,
+        0,
+        0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "exstinguishFire",
+      "duration": 0.1,
+      "desired_traits": [
+        0,
+        0.1,
+        4,
+        5,
+        0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "clearRubble",
+      "duration": 0.1,
+      "desired_traits": [
+        0,
+        0.1,
+        2,
+        0,
+        5
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "repairBuilding",
+      "duration": 0.1,
+      "desired_traits": [
+        0,
+        0.1,
+        0,
+        0,
+        10
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "lostTask",
+      "duration": 0.0,
+      "desired_traits": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    }
+  ],
+  "precedence_constraints": [
+    [
+      1,
+      3
+    ]
+  ],
+  "plan_task_indices": [
+    0,
+    1,
+    2,
+    3
+  ],
+  "itags_parameters": {
+    "has_timeout": true,
+    "timeout": 1500,
+    "timer_name": "itags",
+    "prune_before_eval": true,
+    "save_pruned_nodes": true,
+    "save_closed_nodes": true
+  },
+  "scheduler_parameters": {
+    "scheduler_type": "milp",
+    "milp_scheduler_type": "deterministic",
+    "timeout": 10.0,
+    "threads": 0,
+    "compute_transition_duration_heuristic": true,
+    "use_hierarchical_objective": false,
+    "mip_gap": 0.05
+  },
+  "task_with_prec": {
+    "1": [
+      3
+    ]
+  },
+  "action_finish": {
+    "moveSurvivor": "Ambulance0",
+    "exstinguishFire": "FireTruckGround0",
+    "clearRubble": "none",
+    "repairBuilding": "none",
+    "lostTask": "none"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "name":                  "turtlebot3_burger-1",
+    "initial_configuration": {
+      "configuration_type": "ompl",
+      "goal_type":          "state",
+      "state_space_type":   "se2",
+      "x":                  0.0,
+      "y":                  0.0,
+      "yaw":                0.0
+    },
+    "species":               "turtlebot3_burger"
+  },
+  {
+    "name":                  "turtlebot3_waffle-1",
+    "initial_configuration": {
+      "configuration_type": "ompl",
+      "goal_type":          "state",
+      "state_space_type":   "se2",
+      "x":                  10.0,
+      "y":                  0.0,
+      "yaw":                0.0
+    },
+    "species":               "turtlebot3_waffle"
+  }
+]

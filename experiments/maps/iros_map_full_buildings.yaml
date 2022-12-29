@@ -1,0 +1,6 @@
+image: aamas2022_scenario1.pgm
+resolution: 0.50000
+origin: [ -77.75, -106, 0.000000 ]
+negate: 0
+occupied_thresh: 0.80
+free_thresh: 0.196

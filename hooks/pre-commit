@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+python3 check_branch_name.py
+python3 clang_format.py

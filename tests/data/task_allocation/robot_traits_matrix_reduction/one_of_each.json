@@ -1,0 +1,21 @@
+{
+  "reduction_types":  [
+    [
+      "summation",
+      "product",
+      "minimum",
+      "maximum",
+      "custom"
+    ]
+  ],
+  "custom_functions": [
+    {
+      "row":        0,
+      "col":        4,
+      "parameters": {
+        "vector_reduction_function_type": "threshold_cumulative",
+        "threshold":                      7
+      }
+    }
+  ]
+}

@@ -1,0 +1,90 @@
+---
+Checks: >-
+  bugprone-*,
+  clang-diagnostic-*,
+  clang-analyzer-*,
+  cppcoreguidelines*,
+  google-build-explicit-make-pair,
+  google-build-namespaces,
+  google-build-using-namespace,
+  google-global-names-in-headers,
+  google-readability-avoid-underscore-in-googletest-name,
+  google-readability-casting,
+  misc-definitions-in-headers,
+  misc-misplaced-const,
+  misc-redundant-expression,
+  misc-static-assert,
+  misc-unconventional-assign-operator,
+  misc-uniqueptr-reset-release,
+  misc-unused-alias-decls,
+  misc-unused-parameters,
+  misc-unused-using-decls,
+  modernize-*,
+  performance-*,
+  readability-*,
+  -modernize-use-trailing-return-type,
+  -modernize-use-default-member-init,
+  -cppcoreguidelines-non-private-member-variables-in-classes
+WarningsAsErrors: ''
+HeaderFilterRegex: ''
+AnalyzeTemporaryDtors: false
+FormatStyle: file
+User: andrew
+CheckOptions:
+  - key: bugprone-argument-comment.CommentBoolLiterals
+    value: true
+  - key: bugprone-argument-comment.CommentIntegerLiterals
+    value: true
+  - key: bugprone-argument-comment.CommentFloatLiterals
+    value: true
+  - key: bugprone-argument-comment.CommentStringLiterals
+    value: true
+  - key: bugprone-argument-comment.CommentCharacterLiterals
+    value: true
+  - key: bugprone-argument-comment.CommentUserDefinedLiterals
+    value: true
+  - key: bugprone-argument-comment.CommentNullPtrs
+    value: true
+  - key: cppcoreguidelines-macro-usage.CheckCapsOnly
+    value: true
+  - key: cppcoreguidelines-narrowing-conversions.PedanticMode
+    value: true
+  - key: cppcoreguidelines-non-private-member-variables-in-classes.IgnoreClassesWithAllMemberVariablesBeingPublic
+    value: true
+  - key: performance-inefficient-string-concatenation.StrictMode
+    value: true
+  - key: readability-identifier-naming.AbstractClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.ClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.ClassMemberCase
+    value: lower_case
+  - key: readability-identifier-naming.ClassMemberPrefix
+    value: s_
+  - key: readability-identifier-naming.EnumClassCase
+    value: CamelCase
+  - key: readability-identifier-naming.EnumConstantCase
+    value: lower_case
+  - key: readability-identifier-naming.EnumConstantPrefix
+    value: e_
+  - key: readability-identifier-naming.FunctionCase
+    value: camelBack
+  - key: readability-identifier-naming.MemberCase
+    value: lower_case
+  - key: readability-identifier-naming.MethodCase
+    value: camelBack
+  - key: readability-identifier-naming.NamespaceCase
+    value: lower_case
+  - key: readability-identifier-naming.PrivateMemberPrefix
+    value: m_
+  - key: readability-identifier-naming.ProtectedMemberPrefix
+    value: m_
+  - key: readability-identifier-naming.StaticVariablePrefix
+    value: s_
+  - key: readability-identifier-naming.StructCase
+    value: CamelCase
+  - key: readability-identifier-naming.TemplateParameterCase
+    value: CamelCase
+  - key: readability-identifier-naming.VariableCase
+    value: lower_case
+...

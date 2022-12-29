@@ -1,0 +1,11 @@
+coverage:
+  range: "75...100"
+
+ignore:
+  - "extern"
+
+comment:
+  behavior: new
+
+github_checks:
+  annotations: true

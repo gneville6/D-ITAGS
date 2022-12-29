@@ -1,0 +1,4 @@
+cmake_minimum_required(VERSION 3.16)
+
+file(GLOB_RECURSE TEST_SOURCES **.cpp)
+set(TEST_SOURCES ${TEST_SOURCES} PARENT_SCOPE)

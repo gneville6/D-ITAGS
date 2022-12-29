@@ -1,0 +1,14 @@
+{
+  "goal_type":  "space",
+  "state_type": "se2",
+  "bounds":     {
+    "low":  [
+      -1.0,
+      -1.0
+    ],
+    "high": [
+      1.0,
+      1.0
+    ]
+  }
+}

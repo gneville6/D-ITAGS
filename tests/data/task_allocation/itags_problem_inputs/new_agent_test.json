@@ -1,0 +1,198 @@
+{
+  "motion_planners": [
+    {
+      "environment_parameters": {
+        "configuration_type": "ompl",
+        "environment_type": "pgm",
+        "yaml_filepath": "data/geometric_planning/maps/aamas2022_scenario1.yaml"
+      },
+      "mp_parameters": {
+        "timeout": 1.0,
+        "simplify_path": false,
+        "simplify_path_timeout": -1.0,
+        "connection_range": 0.1,
+        "configuration_type": "ompl"
+      },
+      "mp_type": "prm"
+    },
+    {
+      "environment_parameters": {
+        "configuration_type": "ompl",
+        "environment_type": "pgm",
+        "yaml_filepath": "data/geometric_planning/maps/aamas2022_scenario1.yaml"
+      },
+      "mp_parameters": {
+        "timeout": 1.0,
+        "simplify_path": true,
+        "simplify_path_timeout": 1.0,
+        "connection_range": 0.1,
+        "configuration_type": "ompl"
+      },
+      "mp_type": "rrt"
+    }
+  ],
+  "species": [
+    {
+      "name": "turtlebot3_burger",
+      "traits": [
+        0.2,
+        15
+      ],
+      "bounding_radius": 0.2,
+      "speed": 0.2,
+      "mp_index": 0
+    },
+    {
+      "name": "turtlebot3_waffle",
+      "traits": [
+        0.24,
+        30
+      ],
+      "bounding_radius": 0.32,
+      "speed": 0.24,
+      "mp_index": 0
+    }
+  ],
+  "robots": [
+    {
+      "name": "turtlebot3_burger-1",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "turtlebot3_burger"
+    },
+    {
+      "name": "turtlebot3_waffle-1",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "turtlebot3_waffle"
+    },
+    {
+      "name": "turtlebot3_waffle-1",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "species": "turtlebot3_waffle"
+    }
+  ],
+  "tasks": [
+    {
+      "name": "move_box_a",
+      "duration": 1,
+      "desired_traits": [
+        0,
+        10
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "move_box_b",
+      "duration": 1,
+      "desired_traits": [
+        0,
+        10
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": -1.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 9.0,
+        "y": 0.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    },
+    {
+      "name": "move_box_c",
+      "duration": 1,
+      "desired_traits": [
+        0,
+        10
+      ],
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 0.0,
+        "y": 5.0,
+        "yaw": 0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type": "state",
+        "state_space_type": "se2",
+        "x": 10.0,
+        "y": 5.0,
+        "yaw": 0.0
+      },
+      "mp_index": 0
+    }
+  ],
+  "precedence_constraints": [
+    [
+      0,
+      1
+    ]
+  ],
+  "plan_task_indices": [
+    0,
+    1,
+    2
+  ],
+  "itags_parameters": {
+    "has_timeout": false,
+    "timeout": 30,
+    "timer_name": "itags",
+    "prune_before_eval": true,
+    "save_pruned_nodes": true,
+    "save_closed_nodes": true
+  },
+  "scheduler_parameters": {
+    "scheduler_type": "milp",
+    "milp_scheduler_type": "deterministic",
+    "timeout": 5.0,
+    "threads": 0,
+    "compute_transition_duration_heuristic": false,
+    "use_hierarchical_objective": true
+  }
+}

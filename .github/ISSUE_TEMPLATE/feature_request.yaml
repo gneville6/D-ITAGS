@@ -1,0 +1,26 @@
+name: Feature Request
+description: File a bug report
+title: "[Feature]: "
+labels: [enhancement]
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Please leave your name, so we know who to ask if we need more info?
+      placeholder: Jane Doe
+  - type: textarea
+    id: why
+    attributes:
+     label: Why do we need this feature?
+     description: Tell us what we gain from this feature.
+     placeholder: Tell us what we gain from this feature (can solve more general problems, scalabilty, improved performance, etc)
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the proposal
+      description: Include a detailed description of the feature, with usage examples.
+      placeholder: Include a detailed description of the feature, with usage examples.
+  - type: textarea
+    id: relevant-papers
+    attributes:
+      label: List relevant papers

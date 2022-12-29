@@ -1,0 +1,6 @@
+image: iros_map_part.pgm
+resolution: 0.50000
+origin: [ -106, -77.75, 0.000000 ]
+negate: 0
+occupied_thresh: 0.80
+free_thresh: 0.196

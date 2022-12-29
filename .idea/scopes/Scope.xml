@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="Scope" pattern="(file[grstapse]:benchmarks//*||file[grstapse]:experiments//*||file[grstapse]:py//*||file[grstapse]:include//*||file[grstapse]:src//*||file[grstapse]:tests//*)&amp;&amp;!file[grstapse]:tests/data//*&amp;&amp;!file[grstapse]:benchmarks/data//*" />
+</component>

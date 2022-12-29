@@ -1,0 +1,32 @@
+[
+  {
+    "environment_parameters": {
+      "configuration_type": "ompl",
+      "environment_type":   "pgm",
+      "yaml_filepath":      "data/geometric_planning/maps/aamas2022_scenario1.yaml"
+    },
+    "mp_parameters":          {
+      "timeout":               1.0,
+      "simplify_path":         false,
+      "simplify_path_timeout": -1.0,
+      "connection_range":      0.1,
+      "configuration_type":    "ompl"
+    },
+    "mp_type":                "prm"
+  },
+  {
+    "environment_parameters": {
+      "configuration_type": "ompl",
+      "environment_type":   "pgm",
+      "yaml_filepath":      "data/geometric_planning/maps/aamas2022_scenario1.yaml"
+    },
+    "mp_parameters":          {
+      "timeout":               1.0,
+      "simplify_path":         true,
+      "simplify_path_timeout": 1.0,
+      "connection_range":      0.1,
+      "configuration_type":    "ompl"
+    },
+    "mp_type":                "rrt"
+  }
+]

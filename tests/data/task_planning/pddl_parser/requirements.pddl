@@ -1,0 +1,1 @@
+(:requirements :adl :negative-preconditions :timed-initial-literals :durative-actions :disjunctive-preconditions)

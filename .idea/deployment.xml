@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="Remote Development" deleteMissingItems="true" createEmptyFolders="true" preserveFilePermissions="true" autoUploadExternalChanges="true">
+    <serverData>
+      <paths name="Local Container (94f1b7e7-6f9e-4270-8abe-4e72c1a39f6b)">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-release" />
+            <excludedPath local="true" path="$PROJECT_DIR$/cmake-build-debug" />
+            <excludedPath local="true" path="$PROJECT_DIR$/.github" />
+            <excludedPath local="true" path="$PROJECT_DIR$/hooks" />
+            <excludedPath local="true" path="$PROJECT_DIR$/docker" />
+            <excludedPath local="true" path="$PROJECT_DIR$/scripts" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

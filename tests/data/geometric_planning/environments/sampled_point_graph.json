@@ -1,0 +1,309 @@
+{
+  "configuration_type": "graph",
+  "graph_type":         "sampled_point",
+  "vertices":           [
+    {
+      "id": 0,
+      "x":  0.0,
+      "y":  0.0
+    },
+    {
+      "id": 1,
+      "x":  1.0,
+      "y":  0.0
+    },
+    {
+      "id": 2,
+      "x":  2.0,
+      "y":  0.0
+    },
+    {
+      "id": 3,
+      "x":  1.0,
+      "y":  1.0
+    },
+    {
+      "id": 4,
+      "x":  2.0,
+      "y":  1.0
+    },
+    {
+      "id": 5,
+      "x":  3.0,
+      "y":  1.0
+    },
+    {
+      "id": 6,
+      "x":  4.0,
+      "y":  1.0
+    },
+    {
+      "id": 7,
+      "x":  0.0,
+      "y":  2.0
+    },
+    {
+      "id": 8,
+      "x":  1.0,
+      "y":  2.0
+    },
+    {
+      "id": 9,
+      "x":  3.0,
+      "y":  2.0
+    },
+    {
+      "id": 10,
+      "x":  4.0,
+      "y":  2.0
+    },
+    {
+      "id": 11,
+      "x":  0.0,
+      "y":  3.0
+    },
+    {
+      "id": 12,
+      "x":  2.0,
+      "y":  3.0
+    },
+    {
+      "id": 13,
+      "x":  3.0,
+      "y":  3.0
+    },
+    {
+      "id": 14,
+      "x":  0.0,
+      "y":  4.0
+    },
+    {
+      "id": 15,
+      "x":  1.0,
+      "y":  4.0
+    },
+    {
+      "id": 16,
+      "x":  2.0,
+      "y":  4.0
+    },
+    {
+      "id": 17,
+      "x":  3.0,
+      "y":  4.0
+    },
+    {
+      "id": 18,
+      "x":  4.0,
+      "y":  4.0
+    }
+  ],
+  "edges":              [
+    [
+      {
+        "vertex_a": 0,
+        "vertex_b": 1,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 1,
+        "vertex_b": 2,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 1,
+        "vertex_b": 3,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 2,
+        "vertex_b": 4,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 3,
+        "vertex_b": 4,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 4,
+        "vertex_b": 5,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 5,
+        "vertex_b": 6,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 3,
+        "vertex_b": 8,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 5,
+        "vertex_b": 9,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 6,
+        "vertex_b": 10,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 7,
+        "vertex_b": 8,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 9,
+        "vertex_b": 10,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 7,
+        "vertex_b": 11,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 9,
+        "vertex_b": 13,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 12,
+        "vertex_b": 13,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 11,
+        "vertex_b": 14,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 12,
+        "vertex_b": 16,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 13,
+        "vertex_b": 17,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 14,
+        "vertex_b": 15,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 15,
+        "vertex_b": 16,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 16,
+        "vertex_b": 17,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 17,
+        "vertex_b": 18,
+        "cost":     1.0
+      }
+    ],
+    [
+      {
+        "vertex_a": 0,
+        "vertex_b": 1,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 1,
+        "vertex_b": 3,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 3,
+        "vertex_b": 4,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 4,
+        "vertex_b": 5,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 5,
+        "vertex_b": 9,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 9,
+        "vertex_b": 13,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 13,
+        "vertex_b": 17,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 17,
+        "vertex_b": 18,
+        "cost":     1.0
+      }
+    ],
+    [
+      {
+        "vertex_a": 0,
+        "vertex_b": 1,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 1,
+        "vertex_b": 3,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 3,
+        "vertex_b": 8,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 7,
+        "vertex_b": 8,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 7,
+        "vertex_b": 11,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 11,
+        "vertex_b": 14,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 14,
+        "vertex_b": 15,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 15,
+        "vertex_b": 16,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 16,
+        "vertex_b": 17,
+        "cost":     1.0
+      },
+      {
+        "vertex_a": 17,
+        "vertex_b": 18,
+        "cost":     1.0
+      }
+    ]
+  ]
+}

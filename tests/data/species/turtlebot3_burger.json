@@ -1,0 +1,10 @@
+{
+  "name":            "turtlebot3_burger",
+  "traits":          [
+    0.2,
+    15
+  ],
+  "bounding_radius": 0.2,
+  "speed":           0.2,
+  "mp_index":        0
+}

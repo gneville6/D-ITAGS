@@ -1,0 +1,46 @@
+{
+  "reduction_types":  [
+    [
+      "custom",
+      "custom"
+    ],
+    [
+      "custom",
+      "custom"
+    ]
+  ],
+  "custom_functions": [
+    {
+      "row":        0,
+      "col":        0,
+      "parameters": {
+        "vector_reduction_function_type": "threshold_cumulative",
+        "threshold":                      0.5
+      }
+    },
+    {
+      "row":        1,
+      "col":        0,
+      "parameters": {
+        "vector_reduction_function_type": "threshold_cumulative",
+        "threshold":                      0.5
+      }
+    },
+    {
+      "row":        0,
+      "col":        1,
+      "parameters": {
+        "vector_reduction_function_type": "threshold_cumulative",
+        "threshold":                      0.5
+      }
+    },
+    {
+      "row":        1,
+      "col":        1,
+      "parameters": {
+        "vector_reduction_function_type": "threshold_cumulative",
+        "threshold":                      0.5
+      }
+    }
+  ]
+}

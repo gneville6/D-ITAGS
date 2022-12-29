@@ -1,0 +1,27 @@
+[
+  {
+    "name":                   "move_box_a",
+    "duration":               1.0,
+    "desired_traits":         [
+      0,
+      10
+    ],
+    "initial_configuration":  {
+      "configuration_type": "ompl",
+      "goal_type":          "state",
+      "state_space_type":   "se2",
+      "x":                  0.0,
+      "y":                  0.0,
+      "yaw":                0.0
+    },
+    "terminal_configuration": {
+      "configuration_type": "ompl",
+      "goal_type":          "state",
+      "state_space_type":   "se2",
+      "x":                  10.0,
+      "y":                  0.0,
+      "yaw":                0.0
+    },
+    "mp_index":               0
+  }
+]

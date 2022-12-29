@@ -1,0 +1,19 @@
+name: Stale
+
+on:
+  schedule:
+    - cron: "30 1 * * *"
+
+jobs:
+  stale:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/stale@v1
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          stale-issue-message: 'This issue has been marked as stale due to inactivity. Please check if the issue has been resolved or is no longer necessary.'
+          stale-pr-message: 'This pull request has been marked as stale due to inactivity. Please check if the feature it is associated with is still useful.'
+          stale-issue-label: 'no-issue-activity'
+          stale-pr-label: 'no-pr-activity'

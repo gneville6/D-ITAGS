@@ -1,0 +1,86 @@
+name: CI
+
+# pull_requests are auto generated via 'auto-pr.yml' so there is no reason to run CI on push and pull_request
+on: [ pull_request ]
+
+jobs:
+  unit_tests_and_coverage:
+    runs-on: ubuntu-20.04
+    container: amessing/grstapse:latest
+
+    env:
+      # Set GCC to version 10
+      CC: gcc-10
+      CXX: g++-10
+      GUROBI_HOME: /opt/gurobi/linux64
+      GRB_LICENSE_FILE: /opt/gurobi/gurobi.lic
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Checkout LFS objects
+        run: git lfs checkout
+
+      - name: Create Gurobi License File
+        run: echo $GUROBI_LICENSE | base64 -d >> /opt/gurobi/gurobi.lic
+        shell: bash
+        env:
+          GUROBI_LICENSE: ${{ secrets.GUROBI_LICENSE }}
+
+      - name: Create Build Directory
+        run: cmake -E make_directory bin
+
+      # Specify options
+      - name: Configure CMake
+        run: cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_DOCUMENTATION=OFF -DBUILD_UNITTESTS=ON -DBUILD_COVERAGE=ON -DBUILD_BENCHMARKS=ON -DBUILD_EXECUTABLE=OFF -DBUILD_EXPERIMENTS=OFF -DIGNORE_GUROBI=ON -S . -B bin
+        env:
+          LD_LIBRARY_PATH: /usr/local/lib
+
+      - name: Build Library
+        run: cmake --build bin --parallel 4 --target _grstapse
+        env:
+          LD_LIBRARY_PATH: /usr/local/lib
+
+      - name: Build Unit Tests
+        run: cmake --build bin --parallel 4 --target unittests
+        env:
+          LD_LIBRARY_PATH: /usr/local/lib
+
+      - name: Build Coverage/Run Unit Tests
+        run: cmake --build bin --parallel 4 --target ccov-unittests
+        env:
+          LD_LIBRARY_PATH: /usr/local/lib
+
+      - name: Upload to codecov
+        uses: codecov/codecov-action@v2
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          file: bin/ccov/unittests.info # optional
+          flags: unittests # optional
+          fail_ci_if_error: true # optional (default = false)
+
+  # Do we need the docker? (it has clang-format, but that could be installed quickly via the job)
+  clang-format:
+    runs-on: ubuntu-20.04
+
+    env:
+      # Set GCC to version 10
+      CC: gcc-10
+      CXX: g++-10
+      BUILD_TYPE: Debug
+
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+
+      - name: Run clang-format
+        uses: DoozyX/clang-format-lint-action@v0.12
+        with:
+          source: 'src include tests'
+          extensions: 'hpp,cpp'
+          clangFormatVersion: 12
+          inplace: False
+# TODO(Andrew): clang-tidy/include-what-you-use/

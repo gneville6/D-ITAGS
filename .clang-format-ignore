@@ -1,0 +1,11 @@
+.git*
+.idea
+bin
+build
+cmake*
+docker
+doc
+docs
+extern
+lib
+scripts

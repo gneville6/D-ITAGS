@@ -1,0 +1,1 @@
+:duration (= ?duration 2.0)

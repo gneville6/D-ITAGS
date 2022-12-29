@@ -1,0 +1,136 @@
+{
+  "pddl":                 {
+    "domain_filepath":  "",
+    "problem_filepath": ""
+  },
+  "fcpop_parameters":     {
+    "has_timeout":       true,
+    "timeout":           1800.0,
+    "timer_name":        "fcpop",
+    "prune_before_eval": false,
+    "save_pruned_nodes": false,
+    "save_closed_nodes": false
+  },
+  "itags_parameters":     {
+    "has_timeout":       true,
+    "timeout":           30.0,
+    "timer_name":        "itags",
+    "prune_before_eval": true,
+    "save_pruned_nodes": false,
+    "save_closed_nodes": false
+  },
+  "scheduler_parameters": {
+    "scheduler_type":                        "milp",
+    "milp_scheduler_type":                   "deterministic",
+    "timeout":                               5.0,
+    "threads":                               0,
+    "compute_transition_duration_heuristic": false,
+    "use_hierarchical_objective":            true
+  },
+  "motion_planners":      [
+    {
+      "environment_parameters": {
+        "configuration_type": "ompl",
+        "environment_type":   "pgm",
+        "yaml_filepath":      "data/geometric_planning/maps/aamas2022_scenario1.yaml"
+      },
+      "mp_parameters":          {
+        "timeout":               1.0,
+        "simplify_path":         false,
+        "simplify_path_timeout": -1.0,
+        "connection_range":      0.1,
+        "configuration_type":    "ompl"
+      },
+      "mp_type":                "prm"
+    },
+    {
+      "environment_parameters": {
+        "configuration_type": "ompl",
+        "environment_type":   "pgm",
+        "yaml_filepath":      "data/geometric_planning/maps/aamas2022_scenario1.yaml"
+      },
+      "mp_parameters":          {
+        "timeout":               1.0,
+        "simplify_path":         true,
+        "simplify_path_timeout": 1.0,
+        "connection_range":      0.1,
+        "configuration_type":    "ompl"
+      },
+      "mp_type":                "rrt"
+    }
+  ],
+  "species":              [
+    {
+      "name":            "turtlebot3_burger",
+      "traits":          [
+        0.2,
+        15
+      ],
+      "ompl_state_type": "se2",
+      "bounding_radius": 0.2,
+      "speed":           0.2,
+      "mp_index":        0
+    },
+    {
+      "name":            "turtlebot3_waffle",
+      "traits":          [
+        0.24,
+        30
+      ],
+      "ompl_state_type": "se2",
+      "bounding_radius": 0.32,
+      "speed":           0.24,
+      "mp_index":        1
+    }
+  ],
+  "robots":               [
+    {
+      "name":                  "turtlebot3_burger-1",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type":          "state",
+        "state_space_type":   "se2",
+        "x":                  0.0,
+        "y":                  0.0,
+        "yaw":                0.0
+      },
+      "species":               "turtlebot3_burger"
+    },
+    {
+      "name":                  "turtlebot3_waffle-1",
+      "initial_configuration": {
+        "configuration_type": "ompl",
+        "goal_type":          "state",
+        "state_space_type":   "se2",
+        "x":                  10.0,
+        "y":                  0.0,
+        "yaw":                0.0
+      },
+      "species":               "turtlebot3_waffle"
+    }
+  ],
+  "task_associations":    {
+    "move_box_a": {
+      "desired_traits":         [
+        0,
+        10
+      ],
+      "initial_configuration":  {
+        "configuration_type": "ompl",
+        "goal_type":          "state",
+        "state_space_type":   "se2",
+        "x":                  0.0,
+        "y":                  0.0,
+        "yaw":                0.0
+      },
+      "terminal_configuration": {
+        "configuration_type": "ompl",
+        "goal_type":          "state",
+        "state_space_type":   "se2",
+        "x":                  10.0,
+        "y":                  0.0,
+        "yaw":                0.0
+      }
+    }
+  }
+}
